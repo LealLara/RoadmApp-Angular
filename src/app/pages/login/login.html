@@ -1,0 +1,29 @@
+<div class="container">
+
+  <div class="card">
+
+    <h1>Login</h1>
+
+    <input
+      type="email"
+      placeholder="E-mail"
+      [(ngModel)]="email"
+    >
+
+    <input
+      type="password"
+      placeholder="Senha"
+      [(ngModel)]="senha"
+    >
+
+    <button (click)="logar()">
+      Entrar
+    </button>
+
+    <button class="secondary" (click)="criarConta()">
+      Criar acesso
+    </button>
+
+  </div>
+
+</div>

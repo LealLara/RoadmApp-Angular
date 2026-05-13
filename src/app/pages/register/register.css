@@ -1,0 +1,31 @@
+.container{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#f4f6f9;
+}
+
+.card{
+  width:350px;
+  padding:40px;
+  border-radius:20px;
+  background:white;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+input{
+  padding:14px;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+
+button{
+  padding:14px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+}
