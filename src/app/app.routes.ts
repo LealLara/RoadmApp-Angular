@@ -7,17 +7,17 @@ import { Register } from './pages/register/register';
 export const routes: Routes = [
 
   {
-    path: '',
+    path:'',
     component: Welcome
   },
 
   {
-    path: 'login',
+    path:'login',
     component: Login
   },
 
   {
-    path: 'register',
+    path:'register',
     component: Register
   }
 

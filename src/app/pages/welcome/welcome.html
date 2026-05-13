@@ -1,41 +1,20 @@
 <div class="page">
 
-  <div class="nature-light light1"></div>
-  <div class="nature-light light2"></div>
-  <div class="nature-light light3"></div>
+  <div class="overlay"></div>
+  <div class="animated-bg"></div>
 
-  <header class="header">
+  <header>
 
-    <div class="logo-area">
+    <div class="logo">
 
-      <div class="logo-icon">
-        🌿
-      </div>
-
-      <h1>
-        Roadmapp
-      </h1>
+      <span>
+        RoadmApp
+      </span>
 
     </div>
 
-    <nav class="nav">
-
-      <a href="#cards">
-        Recursos
-      </a>
-
-      <a href="#mindset">
-        Mindset
-      </a>
-
-      <a href="#focus">
-        Foco
-      </a>
-
-    </nav>
-
     <button
-      class="login-button"
+      class="login-btn"
       (click)="entrar()">
 
       Entrar
@@ -44,282 +23,151 @@
 
   </header>
 
-  <main class="hero">
+  <main>
 
-    <section class="hero-left">
+    <section class="hero">
 
-      <div class="badge">
-        ✨ Organização inteligente e produtividade saudável
-      </div>
+      <div class="left">
 
-      <h2>
+        <p class="welcome">
+          Bem-vinda ao Roadmapp 🌿
+        </p>
 
-        Seu tempo.<br>
-        Sua direção.<br>
-        Sua evolução.
+        <h1>
+          Seu caminho.<br>
+          Sua evolução.<br>
+          Sua melhor versão.
+        </h1>
 
-      </h2>
+        <p class="description">
+          Organize seus estudos,
+          exercícios, hábitos,
+          anotações e metas
+          em um único lugar.
+        </p>
 
-      <p class="description">
+        <div class="buttons">
 
-        O Roadmapp ajuda você
-        a organizar estudos,
-        tarefas, hábitos,
-        exercícios, dietas,
-        agenda e metas com
-        clareza, equilíbrio
-        e objetividade.
+          <button
+            class="primary"
+            (click)="cadastro()">
 
-      </p>
+            Começar agora
 
-      <div class="hero-buttons">
+          </button>
 
-        <button
-          class="primary-btn"
-          (click)="cadastro()">
+          <button
+            class="secondary"
+            (click)="entrar()">
 
-          Começar agora
+            Fazer login
 
-        </button>
-
-        <button
-          class="secondary-btn"
-          (click)="entrar()">
-
-          Fazer login
-
-        </button>
-
-      </div>
-
-      <div class="stats">
-
-        <div class="stat">
-
-          <h3>+12k</h3>
-
-          <p>
-            Rotinas organizadas
-          </p>
+          </button>
 
         </div>
 
-        <div class="stat">
+      </div>
 
-          <h3>93%</h3>
+      <div class="right">
 
-          <p>
-            Mais produtividade
-          </p>
-
-        </div>
-
-        <div class="stat">
-
-          <h3>24h</h3>
-
-          <p>
-            Foco contínuo
-          </p>
-
+        <div class="floating-elements">
+          <div class="float-icon">📚</div>
+          <div class="float-icon">🏃</div>
+          <div class="float-icon">📝</div>
+          <div class="float-icon">🥗</div>
+          <div class="float-icon">📅</div>
         </div>
 
       </div>
 
     </section>
 
-    <section class="hero-right">
+    <section class="cards">
 
-      <div class="dashboard-card">
+      <div class="card">
 
-        <div class="dashboard-header">
+        <h3>
+          📚 Estudos
+        </h3>
 
-          <span>
-            🌱 Sua rotina hoje
-          </span>
-
-          <div class="online"></div>
-
-        </div>
-
-        <div class="task">
-
-          <span>
-            📚 Estudos
-          </span>
-
-          <strong>
-            84%
-          </strong>
-
-        </div>
-
-        <div class="progress">
-
-          <div class="fill"></div>
-
-        </div>
-
-        <div class="task">
-
-          <span>
-            🏃 Exercícios
-          </span>
-
-          <strong>
-            72%
-          </strong>
-
-        </div>
-
-        <div class="progress">
-
-          <div class="fill second"></div>
-
-        </div>
-
-        <div class="task">
-
-          <span>
-            🧠 Foco
-          </span>
-
-          <strong>
-            91%
-          </strong>
-
-        </div>
-
-        <div class="progress">
-
-          <div class="fill third"></div>
-
-        </div>
+        <p>
+          Pequenos avanços diários
+          criam grandes resultados.
+        </p>
 
       </div>
+
+      <div class="card">
+
+        <h3>
+          🏃 Exercícios
+        </h3>
+
+        <p>
+          Corpo saudável,
+          mente mais leve
+          e foco constante.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>
+          📝 Anotações
+        </h3>
+
+        <p>
+          Transforme ideias
+          em objetivos reais
+          e organizados.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>
+          🥗 Dietas
+        </h3>
+
+        <p>
+          Equilíbrio e bem-estar
+          começam nos hábitos.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>
+          📅 Agenda
+        </h3>
+
+        <p>
+          Seu tempo merece
+          direção e propósito.
+        </p>
+
+      </div>
+
+    </section>
+
+    <section class="quote">
+
+      <h2>
+
+        “Pequenos passos todos os dias
+        criam grandes transformações.”
+
+      </h2>
+
+      <p>
+        Seja gentil com seu processo 🌸
+      </p>
 
     </section>
 
   </main>
-
-  <section
-    class="cards-section"
-    id="cards">
-
-    <div class="card">
-
-      <div class="icon">
-        ⏳
-      </div>
-
-      <h3>
-        Planejamento
-      </h3>
-
-      <p>
-        Organizar o tempo
-        é transformar ansiedade
-        em clareza e direção.
-      </p>
-
-    </div>
-
-    <div class="card">
-
-      <div class="icon">
-        📚
-      </div>
-
-      <h3>
-        Estudos
-      </h3>
-
-      <p>
-        Pequenos avanços diários
-        criam conhecimento sólido
-        e evolução constante.
-      </p>
-
-    </div>
-
-    <div class="card">
-
-      <div class="icon">
-        🧠
-      </div>
-
-      <h3>
-        Foco
-      </h3>
-
-      <p>
-        Sua atenção é valiosa.
-        Direcione energia para
-        o que realmente importa.
-      </p>
-
-    </div>
-
-    <div class="card">
-
-      <div class="icon">
-        🌿
-      </div>
-
-      <h3>
-        Equilíbrio
-      </h3>
-
-      <p>
-        Produtividade saudável
-        nasce quando existe
-        paz na rotina.
-      </p>
-
-    </div>
-
-    <div class="card">
-
-      <div class="icon">
-        🚀
-      </div>
-
-      <h3>
-        Evolução
-      </h3>
-
-      <p>
-        Grandes mudanças surgem
-        através da constância,
-        não da pressa.
-      </p>
-
-    </div>
-
-  </section>
-
-  <section
-    class="quote-section"
-    id="mindset">
-
-    <div class="quote-card">
-
-      <h2>
-
-        “A vida melhora quando
-        sua rotina trabalha
-        a favor dos seus sonhos.”
-
-      </h2>
-
-      <span>
-
-        Roadmapp 🌱
-
-      </span>
-
-    </div>
-
-  </section>
 
 </div>

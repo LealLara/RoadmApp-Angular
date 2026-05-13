@@ -12,11 +12,15 @@ export class Welcome {
   constructor(private router: Router){}
 
   entrar(){
+
     this.router.navigate(['/login']);
+
   }
 
   cadastro(){
+
     this.router.navigate(['/register']);
+
   }
 
 }
