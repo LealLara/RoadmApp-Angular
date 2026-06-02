@@ -16,7 +16,7 @@ export class Login {
   constructor(private router: Router){}
 
   logar(){
-    alert('Login realizado');
+    this.router.navigate(['/dashboard']);
   }
 
   criarConta(){

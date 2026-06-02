@@ -17,7 +17,7 @@ export class Register {
   constructor(private router: Router){}
 
   cadastrar(){
-    alert('Conta criada');
+    this.router.navigate(['/dashboard']);
   }
 
   entrar(){
