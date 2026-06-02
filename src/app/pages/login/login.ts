@@ -16,6 +16,29 @@ export class Login {
   constructor(private router: Router){}
 
   logar(){
+    const email = this.email.trim().toLowerCase();
+    const senha = this.senha.trim();
+
+    if (!email || !senha) {
+      alert('Por favor, informe e-mail e senha.');
+      return;
+    }
+
+    const stored = localStorage.getItem('roadmapp-users');
+    const users = stored ? JSON.parse(stored) : [];
+    const user = users.find((item: any) => item.email === email);
+
+    if (!user) {
+      alert('E-mail não cadastrado.');
+      return;
+    }
+
+    if (user.password !== senha) {
+      alert('Senha inválida.');
+      return;
+    }
+
+    localStorage.setItem('roadmapp-current-user', JSON.stringify(user));
     this.router.navigate(['/dashboard']);
   }
 

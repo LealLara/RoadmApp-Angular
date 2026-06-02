@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at top, #9dd7ff 0%, #8ac7f8 22%, #74b8f5 50%, #4a97db 100%);
+}
+
+.star-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: block;
+}
+
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+}

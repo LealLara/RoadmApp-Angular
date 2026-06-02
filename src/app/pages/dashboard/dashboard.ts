@@ -45,6 +45,8 @@ export class Dashboard implements AfterViewInit {
   noteImages: string[] = [];
   drawingImage = '';
   filterMonth = new Date().toISOString().slice(0, 7);
+  currentUserName = '';
+  currentUserEmail = '';
 
   private drawing = false;
   private lastX = 0;
@@ -54,8 +56,26 @@ export class Dashboard implements AfterViewInit {
   constructor(private router: Router) {}
 
   ngAfterViewInit(): void {
+    if (!this.verifyUser()) {
+      return;
+    }
+
     this.initCanvas();
     this.loadNotes();
+  }
+
+  private verifyUser(): boolean {
+    const raw = localStorage.getItem('roadmapp-current-user');
+
+    if (!raw) {
+      this.router.navigate(['/login']);
+      return false;
+    }
+
+    const user = JSON.parse(raw) as { nome: string; email: string };
+    this.currentUserName = user.nome || 'Usuário';
+    this.currentUserEmail = user.email;
+    return true;
   }
 
   private initCanvas(): void {
@@ -183,12 +203,16 @@ export class Dashboard implements AfterViewInit {
     this.clearCanvas();
   }
 
+  private getStorageKey(): string {
+    return `roadmapp-notes-${this.currentUserEmail || 'guest'}`;
+  }
+
   private saveNotes(): void {
-    localStorage.setItem('roadmapp-notes', JSON.stringify(this.notes));
+    localStorage.setItem(this.getStorageKey(), JSON.stringify(this.notes));
   }
 
   private loadNotes(): void {
-    const saved = localStorage.getItem('roadmapp-notes');
+    const saved = localStorage.getItem(this.getStorageKey());
 
     if (saved) {
       this.notes = JSON.parse(saved) as Note[];
@@ -231,7 +255,10 @@ export class Dashboard implements AfterViewInit {
 
     link.href = url;
     link.download = `roadmapp-notes-${this.filterMonth}.csv`;
+    link.style.display = 'none';
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
     URL.revokeObjectURL(url);
   }
 
@@ -241,6 +268,7 @@ export class Dashboard implements AfterViewInit {
   }
 
   logout(): void {
+    localStorage.removeItem('roadmapp-current-user');
     this.router.navigate(['/login']);
   }
 }
