@@ -59,5 +59,6 @@ app.UseCors("AngularClient");
 
 app.MapAuthEndpoints();
 app.MapPlannerEndpoints();
+app.MapNotesEndpoints();
 
 app.Run();

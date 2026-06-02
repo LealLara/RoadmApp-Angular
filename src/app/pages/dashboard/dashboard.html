@@ -2,7 +2,7 @@
   <header class="dashboard-header">
     <div>
       <p class="eyebrow">Painel pessoal</p>
-      <h1>Minha agenda de temas e progresso</h1>
+      <h1>Minha agenda de temas e progresso, {{ currentUserName }}</h1>
       <p>Crie notas, envie imagens, desenhe ideias e acompanhe o mês com gráficos e exportação.</p>
     </div>
 
@@ -11,7 +11,7 @@
         Mês
         <input type="month" [(ngModel)]="filterMonth" />
       </label>
-      <button class="ghost-button" type="button" (click)="exportMonth()">Exportar planilha</button>
+      <button class="ghost-button" type="button" (click)="exportMonth()">Exportar como Excel</button>
       <button class="solid-button" type="button" (click)="logout()">Sair</button>
     </div>
   </header>
