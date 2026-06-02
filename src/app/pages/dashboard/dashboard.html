@@ -1,0 +1,139 @@
+<div class="dashboard-shell">
+  <header class="dashboard-header">
+    <div>
+      <p class="eyebrow">Painel pessoal</p>
+      <h1>Minha agenda de temas e progresso</h1>
+      <p>Crie notas, envie imagens, desenhe ideias e acompanhe o mês com gráficos e exportação.</p>
+    </div>
+
+    <div class="dashboard-actions">
+      <label class="month-select">
+        Mês
+        <input type="month" [(ngModel)]="filterMonth" />
+      </label>
+      <button class="ghost-button" type="button" (click)="exportMonth()">Exportar planilha</button>
+      <button class="solid-button" type="button" (click)="logout()">Sair</button>
+    </div>
+  </header>
+
+  <section class="dashboard-grid">
+    <article class="panel-card note-form-card">
+      <div class="panel-head">
+        <span class="eyebrow">Nova nota</span>
+        <h2>Registrar ideia, hábito ou tarefa</h2>
+      </div>
+
+      <form class="note-form">
+        <label>
+          Tema
+          <select [(ngModel)]="noteCategory" name="category">
+            <option *ngFor="let item of categories" [value]="item.value">{{ item.label }}</option>
+          </select>
+        </label>
+
+        <label>
+          Título
+          <input type="text" [(ngModel)]="noteTitle" name="title" placeholder="Ex: Estudar para prova" />
+        </label>
+
+        <label>
+          Data
+          <input type="date" [(ngModel)]="noteDate" name="date" />
+        </label>
+
+        <label>
+          Descrição
+          <textarea rows="5" [(ngModel)]="noteContent" name="content" placeholder="Escreva sua nota, ideia ou lembrete..."></textarea>
+        </label>
+
+        <label>
+          Anexar imagem
+          <input type="file" accept="image/*" (change)="onFileChange($event)" />
+        </label>
+
+        <div class="image-row" *ngIf="noteImages.length">
+          <img *ngFor="let image of noteImages" [src]="image" alt="Anexo de nota" />
+        </div>
+
+        <div class="draw-panel">
+          <div class="draw-head">
+            <div>
+              <span class="eyebrow">Rabiscar</span>
+              <h3>Desenhe uma ideia rápida</h3>
+            </div>
+            <div class="draw-actions">
+              <button class="ghost-button" type="button" (click)="clearCanvas()">Limpar</button>
+              <button class="solid-button" type="button" (click)="saveDrawing()">Salvar desenho</button>
+            </div>
+          </div>
+
+          <canvas #drawCanvas class="draw-canvas" (pointerdown)="startDrawing($event)" (pointermove)="draw($event)" (pointerup)="stopDrawing()" (pointerleave)="stopDrawing()"></canvas>
+
+          <img *ngIf="drawingImage" [src]="drawingImage" alt="Desenho salvo" class="drawing-preview" />
+        </div>
+
+        <button class="primary-button" type="button" (click)="saveNote()">Salvar anotação</button>
+      </form>
+    </article>
+
+    <article class="panel-card stats-card">
+      <div class="panel-head">
+        <span class="eyebrow">Painel de progresso</span>
+        <h2>Resumo por tema</h2>
+      </div>
+
+      <div class="summary-grid">
+        <div class="summary-item" *ngFor="let item of categories">
+          <span>{{ item.label }}</span>
+          <strong>{{ getCategoryCount(item.value) }}</strong>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <h3>Progresso por tema</h3>
+        <div class="chart-list">
+          <div class="chart-row" *ngFor="let item of categories">
+            <span>{{ item.label }}</span>
+            <div class="bar-bg" aria-hidden="true">
+              <div class="bar-fill" [style.width.%]="getCategoryPercentage(item.value)"></div>
+            </div>
+            <strong>{{ getCategoryCount(item.value) }}</strong>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="notes-section">
+    <div class="notes-toolbar">
+      <div>
+        <span class="eyebrow">Agenda</span>
+        <h2>Anotações e blocos de rotina</h2>
+        <p>Use o filtro de mês para gerar sua planilha ou revisar os temas do período.</p>
+      </div>
+    </div>
+
+    <div *ngIf="filteredNotes.length === 0" class="empty-state">
+      Nenhuma anotação encontrada para {{ filterMonth }}.
+    </div>
+
+    <ul class="notes-list">
+      <li class="note-card" *ngFor="let note of filteredNotes">
+        <header>
+          <div>
+            <strong>{{ note.title }}</strong>
+            <small>{{ note.category }} • {{ note.createdAt | date:'shortDate' }}</small>
+          </div>
+          <button class="text-button" type="button" (click)="removeNote(note.id)">Excluir</button>
+        </header>
+
+        <p>{{ note.content }}</p>
+
+        <div class="note-media" *ngIf="note.images.length || note.drawing">
+          <img *ngFor="let image of note.images" [src]="image" alt="Imagem da nota" />
+          <img *ngIf="note.drawing" [src]="note.drawing" alt="Desenho da nota" />
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>

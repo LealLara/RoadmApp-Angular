@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RoadmApp.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f35ccc931fadddf08ba819e9579cd6104bb71d9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0aacfbc5efe75655414a70c19ea5ee2603942579")]
 [assembly: System.Reflection.AssemblyProductAttribute("RoadmApp.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RoadmApp.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
