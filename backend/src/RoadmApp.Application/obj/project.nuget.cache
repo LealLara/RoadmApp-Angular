@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "AOposgKPj20=",
+  "success": true,
+  "projectFilePath": "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Application\\RoadmApp.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\larac\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

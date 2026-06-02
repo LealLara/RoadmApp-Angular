@@ -1,0 +1,339 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Api\\RoadmApp.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Api\\RoadmApp.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Api\\RoadmApp.Api.csproj",
+        "projectName": "RoadmApp.Api",
+        "projectPath": "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Api\\RoadmApp.Api.csproj",
+        "packagesPath": "C:\\Users\\larac\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\larac\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Application\\RoadmApp.Application.csproj": {
+                "projectPath": "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Application\\RoadmApp.Application.csproj"
+              },
+              "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Infrastructure\\RoadmApp.Infrastructure.csproj": {
+                "projectPath": "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Infrastructure\\RoadmApp.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.27, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.22, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Application\\RoadmApp.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Application\\RoadmApp.Application.csproj",
+        "projectName": "RoadmApp.Application",
+        "projectPath": "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Application\\RoadmApp.Application.csproj",
+        "packagesPath": "C:\\Users\\larac\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\larac\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Domain\\RoadmApp.Domain.csproj": {
+                "projectPath": "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Domain\\RoadmApp.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Domain\\RoadmApp.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Domain\\RoadmApp.Domain.csproj",
+        "projectName": "RoadmApp.Domain",
+        "projectPath": "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Domain\\RoadmApp.Domain.csproj",
+        "packagesPath": "C:\\Users\\larac\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\larac\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Infrastructure\\RoadmApp.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Infrastructure\\RoadmApp.Infrastructure.csproj",
+        "projectName": "RoadmApp.Infrastructure",
+        "projectPath": "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Infrastructure\\RoadmApp.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\larac\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\larac\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Application\\RoadmApp.Application.csproj": {
+                "projectPath": "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Application\\RoadmApp.Application.csproj"
+              },
+              "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Domain\\RoadmApp.Domain.csproj": {
+                "projectPath": "C:\\Projetos\\dev\\github-repos\\saas\\financeiro\\WebSistem\\angular\\primeiro-angular\\backend\\src\\RoadmApp.Domain\\RoadmApp.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.22, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.22, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

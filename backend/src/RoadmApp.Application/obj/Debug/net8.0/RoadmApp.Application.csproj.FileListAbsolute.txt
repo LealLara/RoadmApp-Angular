@@ -1,0 +1,16 @@
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Application\bin\Debug\net8.0\RoadmApp.Application.deps.json
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Application\bin\Debug\net8.0\RoadmApp.Application.dll
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Application\bin\Debug\net8.0\RoadmApp.Application.pdb
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Application\bin\Debug\net8.0\RoadmApp.Domain.dll
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Application\bin\Debug\net8.0\RoadmApp.Domain.pdb
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Application\obj\Debug\net8.0\RoadmApp.Application.csproj.AssemblyReference.cache
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Application\obj\Debug\net8.0\RoadmApp.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Application\obj\Debug\net8.0\RoadmApp.Application.AssemblyInfoInputs.cache
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Application\obj\Debug\net8.0\RoadmApp.Application.AssemblyInfo.cs
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Application\obj\Debug\net8.0\RoadmApp.Application.csproj.CoreCompileInputs.cache
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Application\obj\Debug\net8.0\RoadmApp.Application.sourcelink.json
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Application\obj\Debug\net8.0\RoadmApp.5E1A3D25.Up2Date
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Application\obj\Debug\net8.0\RoadmApp.Application.dll
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Application\obj\Debug\net8.0\refint\RoadmApp.Application.dll
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Application\obj\Debug\net8.0\RoadmApp.Application.pdb
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Application\obj\Debug\net8.0\ref\RoadmApp.Application.dll

@@ -1,31 +1,54 @@
-<div class="container">
+<main class="auth-page">
+  <section class="auth-panel" aria-labelledby="register-title">
+    <div class="brand-row">
+      <span class="brand-mark">R</span>
+      <span>RoadmApp</span>
+    </div>
 
-  <div class="card">
+    <div class="auth-heading">
+      <p class="eyebrow">Nova jornada</p>
+      <h1 id="register-title">Crie sua conta</h1>
+      <p>Monte um espaco simples para organizar estudos, habitos e objetivos.</p>
+    </div>
 
-    <h1>Criar Conta</h1>
+    <form class="auth-form">
+      <label for="nome">Nome</label>
+      <input
+        id="nome"
+        name="nome"
+        type="text"
+        autocomplete="name"
+        placeholder="Seu nome"
+        [(ngModel)]="nome"
+      >
 
-    <input
-      type="text"
-      placeholder="Nome"
-      [(ngModel)]="nome"
-    >
+      <label for="email">E-mail</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        autocomplete="email"
+        placeholder="voce@email.com"
+        [(ngModel)]="email"
+      >
 
-    <input
-      type="email"
-      placeholder="E-mail"
-      [(ngModel)]="email"
-    >
+      <label for="senha">Senha</label>
+      <input
+        id="senha"
+        name="senha"
+        type="password"
+        autocomplete="new-password"
+        placeholder="Crie uma senha"
+        [(ngModel)]="senha"
+      >
 
-    <input
-      type="password"
-      placeholder="Senha"
-      [(ngModel)]="senha"
-    >
+      <button class="primary-button" type="button" (click)="cadastrar()">
+        Criar acesso
+      </button>
+    </form>
 
-    <button (click)="cadastrar()">
-      Criar acesso
+    <button class="text-button" type="button" (click)="entrar()">
+      Ja tenho uma conta
     </button>
-
-  </div>
-
-</div>
+  </section>
+</main>

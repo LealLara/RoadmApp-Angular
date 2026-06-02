@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/RoadmApp.Api/RoadmApp.Api.csproj" />
+    <Project Path="src/RoadmApp.Application/RoadmApp.Application.csproj" />
+    <Project Path="src/RoadmApp.Domain/RoadmApp.Domain.csproj" />
+    <Project Path="src/RoadmApp.Infrastructure/RoadmApp.Infrastructure.csproj" />
+  </Folder>
+</Solution>
