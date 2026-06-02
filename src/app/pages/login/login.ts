@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,12 @@ export class Login {
     const senha = this.senha.trim();
 
     if (!email || !senha) {
-      alert('Por favor, informe e-mail e senha.');
+      Swal.fire({
+        icon: 'warning',
+        title: 'Campos incompletos',
+        text: 'Por favor, informe e-mail e senha.',
+        confirmButtonColor: '#0f766e'
+      });
       return;
     }
 
@@ -29,17 +35,37 @@ export class Login {
     const user = users.find((item: any) => item.email === email);
 
     if (!user) {
-      alert('E-mail não cadastrado.');
+      Swal.fire({
+        icon: 'error',
+        title: 'Usuário não encontrado',
+        text: 'E-mail não cadastrado.',
+        confirmButtonColor: '#0f766e'
+      });
       return;
     }
 
     if (user.password !== senha) {
-      alert('Senha inválida.');
+      Swal.fire({
+        icon: 'error',
+        title: 'Acesso negado',
+        text: 'Senha inválida.',
+        confirmButtonColor: '#0f766e'
+      });
       return;
     }
 
     localStorage.setItem('roadmapp-current-user', JSON.stringify(user));
-    this.router.navigate(['/dashboard']);
+    Swal.fire({
+      icon: 'success',
+      title: 'Bem-vindo!',
+      text: `Olá, ${user.nome}`,
+      confirmButtonColor: '#0f766e',
+      timer: 1500,
+      showConfirmButton: false
+    });
+    setTimeout(() => {
+      this.router.navigate(['/dashboard']);
+    }, 1500);
   }
 
   criarConta(){

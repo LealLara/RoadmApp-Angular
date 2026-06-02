@@ -2,6 +2,8 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import Swal from 'sweetalert2';
 
 interface Note {
   id: string;
@@ -53,7 +55,7 @@ export class Dashboard implements AfterViewInit {
   private lastY = 0;
   private context: CanvasRenderingContext2D | null = null;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private http: HttpClient) {}
 
   ngAfterViewInit(): void {
     if (!this.verifyUser()) {
@@ -147,7 +149,13 @@ export class Dashboard implements AfterViewInit {
     }
 
     this.drawingImage = this.canvasRef.nativeElement.toDataURL('image/png');
-    alert('Desenho salvo. Você pode incluir ele na sua anotação.');
+    Swal.fire({
+      icon: 'success',
+      title: 'Desenho salvo!',
+      text: 'Você pode incluir ele na sua anotação.',
+      confirmButtonColor: '#0f766e',
+      showConfirmButton: true
+    });
   }
 
   onFileChange(event: Event): void {
@@ -172,7 +180,12 @@ export class Dashboard implements AfterViewInit {
 
   saveNote(): void {
     if (!this.noteTitle.trim() || !this.noteContent.trim()) {
-      alert('Preencha o título e o conteúdo da anotação.');
+      Swal.fire({
+        icon: 'warning',
+        title: 'Campos incompletos',
+        text: 'Preencha o título e o conteúdo da anotação.',
+        confirmButtonColor: '#0f766e'
+      });
       return;
     }
 
@@ -190,7 +203,14 @@ export class Dashboard implements AfterViewInit {
     this.notes.unshift(note);
     this.saveNotes();
     this.resetForm();
-    alert('Anotação salva com sucesso.');
+    Swal.fire({
+      icon: 'success',
+      title: 'Sucesso!',
+      text: 'Anotação salva com sucesso.',
+      confirmButtonColor: '#0f766e',
+      timer: 2000,
+      showConfirmButton: false
+    });
   }
 
   private resetForm(): void {
@@ -238,28 +258,87 @@ export class Dashboard implements AfterViewInit {
 
   exportMonth(): void {
     if (!this.filterMonth) {
-      alert('Selecione um mês para exportar.');
+      Swal.fire({
+        icon: 'warning',
+        title: 'Mês não selecionado',
+        text: 'Selecione um mês para exportar.',
+        confirmButtonColor: '#0f766e'
+      });
       return;
     }
 
     const notes = this.filteredNotes;
-    const rows = notes.map((note) => {
-      const cleanText = note.content.replace(/"/g, '""');
-      return `"${note.createdAt.split('T')[0]}","${note.category}","${note.title}","${cleanText}","${note.images.length}","${note.drawing ? 'SIM' : 'NÃO'}"`;
+
+    if (notes.length === 0) {
+      Swal.fire({
+        icon: 'info',
+        title: 'Sem dados',
+        text: 'Nenhuma anotação encontrada para este mês.',
+        confirmButtonColor: '#0f766e'
+      });
+      return;
+    }
+
+    const payload = {
+      month: this.filterMonth,
+      notes: notes.map((note) => ({
+        id: note.id,
+        title: note.title,
+        category: note.category,
+        content: note.content,
+        createdAt: note.createdAt,
+        month: note.month,
+        images: note.images,
+        drawing: note.drawing
+      }))
+    };
+
+    Swal.fire({
+      title: 'Gerando arquivo...',
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+      didOpen: () => {
+        Swal.showLoading();
+      }
     });
 
-    const csvContent = ['Data,Categoria,Título,Conteúdo,Imagens,Desenho', ...rows].join('\r\n');
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
+    this.http
+      .post('http://localhost:5122/api/notes/export-excel', payload, {
+        responseType: 'blob'
+      })
+      .subscribe({
+        next: (blob: Blob) => {
+          Swal.close();
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = `roadmapp-notas-${this.filterMonth}.xlsx`;
+          link.style.display = 'none';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          URL.revokeObjectURL(url);
 
-    link.href = url;
-    link.download = `roadmapp-notes-${this.filterMonth}.csv`;
-    link.style.display = 'none';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+          Swal.fire({
+            icon: 'success',
+            title: 'Arquivo baixado!',
+            text: `Planilha ${this.filterMonth} foi salva com sucesso.`,
+            confirmButtonColor: '#0f766e',
+            timer: 2000,
+            showConfirmButton: false
+          });
+        },
+        error: (err) => {
+          Swal.close();
+          console.error('Erro ao exportar:', err);
+          Swal.fire({
+            icon: 'error',
+            title: 'Erro na exportação',
+            text: 'Verifique se o servidor backend está rodando em http://localhost:5122',
+            confirmButtonColor: '#0f766e'
+          });
+        }
+      });
   }
 
   removeNote(id: string): void {

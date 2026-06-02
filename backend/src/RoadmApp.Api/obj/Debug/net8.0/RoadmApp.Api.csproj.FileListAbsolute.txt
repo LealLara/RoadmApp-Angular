@@ -142,3 +142,10 @@ C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\
 C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Api\obj\Debug\net8.0\RoadmApp.Api.pdb
 C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Api\obj\Debug\net8.0\RoadmApp.Api.genruntimeconfig.cache
 C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Api\obj\Debug\net8.0\ref\RoadmApp.Api.dll
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Api\bin\Debug\net8.0\ClosedXML.dll
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Api\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Api\bin\Debug\net8.0\ExcelNumberFormat.dll
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Api\bin\Debug\net8.0\Irony.dll
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Api\bin\Debug\net8.0\SixLabors.Fonts.dll
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Api\bin\Debug\net8.0\System.IO.Packaging.dll
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Api\bin\Debug\net8.0\XLParser.dll
