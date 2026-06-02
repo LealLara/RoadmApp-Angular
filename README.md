@@ -636,9 +636,8 @@ Desenvolvido como uma demonstração de expertise em:
 
 ## 📞 Contato
 
-- **GitHub**: [seu-usuario](https://github.com)
-- **LinkedIn**: [seu-perfil](https://linkedin.com)
-- **Email**: seu-email@example.com
+- **GitHub**: [Lara Leal](https://github.com/LealLara)
+- **LinkedIn**: [lara-leal-dev](https://linkedin.com) 
 
 ---
 
