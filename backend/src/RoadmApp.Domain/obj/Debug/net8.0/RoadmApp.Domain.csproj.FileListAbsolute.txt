@@ -1,0 +1,12 @@
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Domain\bin\Debug\net8.0\RoadmApp.Domain.deps.json
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Domain\bin\Debug\net8.0\RoadmApp.Domain.dll
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Domain\bin\Debug\net8.0\RoadmApp.Domain.pdb
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Domain\obj\Debug\net8.0\RoadmApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Domain\obj\Debug\net8.0\RoadmApp.Domain.AssemblyInfoInputs.cache
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Domain\obj\Debug\net8.0\RoadmApp.Domain.AssemblyInfo.cs
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Domain\obj\Debug\net8.0\RoadmApp.Domain.csproj.CoreCompileInputs.cache
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Domain\obj\Debug\net8.0\RoadmApp.Domain.sourcelink.json
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Domain\obj\Debug\net8.0\RoadmApp.Domain.dll
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Domain\obj\Debug\net8.0\refint\RoadmApp.Domain.dll
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Domain\obj\Debug\net8.0\RoadmApp.Domain.pdb
+C:\Projetos\dev\github-repos\saas\financeiro\WebSistem\angular\primeiro-angular\backend\src\RoadmApp.Domain\obj\Debug\net8.0\ref\RoadmApp.Domain.dll

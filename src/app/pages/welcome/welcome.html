@@ -1,173 +1,112 @@
-<div class="page">
-
-  <div class="overlay"></div>
-  <div class="animated-bg"></div>
-
-  <header>
-
-    <div class="logo">
-
-      <span>
-        RoadmApp
-      </span>
-
-    </div>
-
-    <button
-      class="login-btn"
-      (click)="entrar()">
-
-      Entrar
-
+<div class="page-shell">
+  <header class="site-header">
+    <button class="brand" type="button" aria-label="RoadmApp inicio">
+      <span class="brand-mark">R</span>
+      <span>RoadmApp</span>
     </button>
 
+    <nav class="nav-actions" aria-label="Acesso">
+      <button class="ghost-button" type="button" (click)="entrar()">
+        Entrar
+      </button>
+      <button class="solid-button" type="button" (click)="cadastro()">
+        Criar conta
+      </button>
+    </nav>
   </header>
 
   <main>
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Planejamento pessoal inteligente</p>
 
-    <section class="hero">
-
-      <div class="left">
-
-        <p class="welcome">
-          Bem-vinda ao Roadmapp 🌿
-        </p>
-
-        <h1>
-          Seu caminho.<br>
-          Sua evolução.<br>
-          Sua melhor versão.
+        <h1 id="hero-title">
+          Organize sua rotina com clareza, foco e const&acirc;ncia.
         </h1>
 
-        <p class="description">
-          Organize seus estudos,
-          exercícios, hábitos,
-          anotações e metas
-          em um único lugar.
+        <p class="hero-description">
+          Re&uacute;na estudos, treinos, h&aacute;bitos, anota&ccedil;&otilde;es e metas em uma
+          experi&ecirc;ncia simples para acompanhar sua evolu&ccedil;&atilde;o todos os dias.
         </p>
 
-        <div class="buttons">
-
-          <button
-            class="primary"
-            (click)="cadastro()">
-
-            Começar agora
-
+        <div class="hero-actions">
+          <button class="solid-button large" type="button" (click)="cadastro()">
+            Come&ccedil;ar agora
           </button>
-
-          <button
-            class="secondary"
-            (click)="entrar()">
-
+          <button class="ghost-button large" type="button" (click)="entrar()">
             Fazer login
-
           </button>
+        </div>
+      </div>
 
+      <aside class="dashboard-preview" aria-label="Resumo de rotina">
+        <div class="preview-header">
+          <div>
+            <span class="muted-label">Hoje</span>
+            <strong>Plano em andamento</strong>
+          </div>
+          <span class="status-pill">78%</span>
         </div>
 
-      </div>
-
-      <div class="right">
-
-        <div class="floating-elements">
-          <div class="float-icon">📚</div>
-          <div class="float-icon">🏃</div>
-          <div class="float-icon">📝</div>
-          <div class="float-icon">🥗</div>
-          <div class="float-icon">📅</div>
+        <div class="progress-card">
+          <span>Progresso semanal</span>
+          <div class="progress-track" aria-hidden="true">
+            <span></span>
+          </div>
         </div>
 
-      </div>
+        <div class="task-list">
+          <div class="task-item">
+            <span class="task-marker study"></span>
+            <div>
+              <strong>Estudar Angular</strong>
+              <small>45 minutos reservados</small>
+            </div>
+          </div>
 
+          <div class="task-item">
+            <span class="task-marker wellness"></span>
+            <div>
+              <strong>Treino leve</strong>
+              <small>Meta de movimento do dia</small>
+            </div>
+          </div>
+
+          <div class="task-item">
+            <span class="task-marker notes"></span>
+            <div>
+              <strong>Revisar metas</strong>
+              <small>Notas e prioridades</small>
+            </div>
+          </div>
+        </div>
+      </aside>
     </section>
 
-    <section class="cards">
+    <section class="feature-grid" aria-label="Recursos">
+      <article class="feature-card">
+        <span class="feature-index">01</span>
+        <h2>Estudos</h2>
+        <p>Crie blocos de estudo e acompanhe avan&ccedil;os sem perder o ritmo.</p>
+      </article>
 
-      <div class="card">
+      <article class="feature-card">
+        <span class="feature-index">02</span>
+        <h2>Exerc&iacute;cios</h2>
+        <p>Mantenha metas de movimento conectadas ao seu planejamento.</p>
+      </article>
 
-        <h3>
-          📚 Estudos
-        </h3>
+      <article class="feature-card">
+        <span class="feature-index">03</span>
+        <h2>Anota&ccedil;&otilde;es</h2>
+        <p>Transforme ideias soltas em prioridades organizadas para executar.</p>
+      </article>
 
-        <p>
-          Pequenos avanços diários
-          criam grandes resultados.
-        </p>
-
-      </div>
-
-      <div class="card">
-
-        <h3>
-          🏃 Exercícios
-        </h3>
-
-        <p>
-          Corpo saudável,
-          mente mais leve
-          e foco constante.
-        </p>
-
-      </div>
-
-      <div class="card">
-
-        <h3>
-          📝 Anotações
-        </h3>
-
-        <p>
-          Transforme ideias
-          em objetivos reais
-          e organizados.
-        </p>
-
-      </div>
-
-      <div class="card">
-
-        <h3>
-          🥗 Dietas
-        </h3>
-
-        <p>
-          Equilíbrio e bem-estar
-          começam nos hábitos.
-        </p>
-
-      </div>
-
-      <div class="card">
-
-        <h3>
-          📅 Agenda
-        </h3>
-
-        <p>
-          Seu tempo merece
-          direção e propósito.
-        </p>
-
-      </div>
-
+      <article class="feature-card">
+        <span class="feature-index">04</span>
+        <h2>H&aacute;bitos</h2>
+        <p>Visualize consist&ecirc;ncia, ajustes e pequenas vit&oacute;rias do dia a dia.</p>
+      </article>
     </section>
-
-    <section class="quote">
-
-      <h2>
-
-        “Pequenos passos todos os dias
-        criam grandes transformações.”
-
-      </h2>
-
-      <p>
-        Seja gentil com seu processo 🌸
-      </p>
-
-    </section>
-
   </main>
-
 </div>

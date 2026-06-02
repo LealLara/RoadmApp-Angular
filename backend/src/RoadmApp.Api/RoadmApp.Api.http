@@ -1,0 +1,38 @@
+@RoadmApp.Api_HostAddress = http://localhost:5122
+@UserId = replace-with-user-id
+
+POST {{RoadmApp.Api_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Usuario Teste",
+  "email": "teste@roadmapp.com",
+  "password": "123456"
+}
+
+###
+
+POST {{RoadmApp.Api_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "teste@roadmapp.com",
+  "password": "123456"
+}
+
+###
+
+GET {{RoadmApp.Api_HostAddress}}/api/users/{{UserId}}/dashboard
+Accept: application/json
+
+###
+
+POST {{RoadmApp.Api_HostAddress}}/api/users/{{UserId}}/tasks
+Content-Type: application/json
+
+{
+  "title": "Estudar Angular",
+  "description": "Revisar componentes, rotas e forms",
+  "dueDate": "2026-06-05",
+  "status": "InProgress"
+}
